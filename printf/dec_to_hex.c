@@ -1,27 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstclear.c                                      :+:      :+:    :+:   */
+/*   dec_to_hex.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ymarcais <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/22 13:11:47 by ymarcais          #+#    #+#             */
-/*   Updated: 2022/12/30 13:04:43 by ymarcais         ###   ########.fr       */
+/*   Created: 2022/12/04 12:23:19 by ymarcais          #+#    #+#             */
+/*   Updated: 2022/12/04 16:09:43 by ymarcais         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "libftprintf.h"
 
-void	ft_lstclear(t_list **lst, void (*del)(void*))
+void	dec_to_hex(args(va_list, long long int))
 {
-	t_list	*tmp;
+	long long int	dec;
+	long long char hex;
+	int tmp;
+	int i;
+	int size;
 
-	if (!del || !lst || !*lst)
-		return ;
-	while (lst && *lst)
+	dec = args;
+	size = dec_size(dec);
+	i = 0;
+	tmp = 0;
+	hex = (char *)malloc(sizeof(char) * size + 1
+	dec % 16;
+	if (tmp < 10)
 	{
-		tmp = (*lst)->next;
-		ft_lstdelone(*lst, del);
-		*lst = tmp;
-	}
-}
+		
+
+	
+		 

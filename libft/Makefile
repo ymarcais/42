@@ -108,12 +108,6 @@ CC = gcc
 
 CC_FLAGS = -Wall -Wextra -Werror
 
-
-#so: $(SRCS) $(SRCSB)
-#	$(CC) -nostartfiles -fPIC $(CFLAGS) $(SRCS) $(SRCSB)
-#	gcc -nostartfiles -shared -o libft.so $(OBJS) $(OBJSB)
-
-
 all: $(NAME)
 
 
@@ -126,6 +120,7 @@ $(OBJS): $(SRCS)
 
 bonus:
 	$(CC) $(CC_FLAGS) -c $(SRCSB)
+	ar -rc $(NAME) $(OBJSB)
 
 clean:
 	rm -rf $(OBJS) $(OBJSB)

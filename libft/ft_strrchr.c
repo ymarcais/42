@@ -6,7 +6,7 @@
 /*   By: ymarcais <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/09 16:31:15 by ymarcais          #+#    #+#             */
-/*   Updated: 2022/12/02 12:02:14 by ymarcais         ###   ########.fr       */
+/*   Updated: 2022/12/30 15:06:46 by ymarcais         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 char	*ft_strrchr(const char *s, int c)
 {
-	char	*cur;
+	char			*cur;
 	unsigned int	i;
 
 	i = 0;
@@ -23,7 +23,7 @@ char	*ft_strrchr(const char *s, int c)
 	{
 		if (s[i] == (char)c)
 			cur = (char *)&s[i];
-		i++;		
+		i++;
 	}
 	if (cur)
 		return (cur);

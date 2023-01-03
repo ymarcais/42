@@ -1,27 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstclear.c                                      :+:      :+:    :+:   */
+/*   ft_digit.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ymarcais <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/22 13:11:47 by ymarcais          #+#    #+#             */
-/*   Updated: 2022/12/30 13:04:43 by ymarcais         ###   ########.fr       */
+/*   Created: 2022/12/04 10:49:15 by ymarcais          #+#    #+#             */
+/*   Updated: 2022/12/04 11:17:21 by ymarcais         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
-void	ft_lstclear(t_list **lst, void (*del)(void*))
+void	ft_digit(args(va_list(args, long long int), int fd))
 {
-	t_list	*tmp;
+	char	*cnb;
+	long long i;
 
-	if (!del || !lst || !*lst)
-		return ;
-	while (lst && *lst)
-	{
-		tmp = (*lst)->next;
-		ft_lstdelone(*lst, del);
-		*lst = tmp;
-	}
+	i = args;
+	cnb = ft_itoa(i);
+	ft_putstr_fd(cnb, 1);
 }

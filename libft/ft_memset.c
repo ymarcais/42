@@ -25,25 +25,3 @@ void	*ft_memset(void *s, int c, size_t n)
 	}
 	return (s);
 }
-
-/*#include <string.h>
-
-int main()
-{
-	const int	size = 20;
-	char	b1[20];
-	char	b2[20];
-
-
-	memset(b1, 'A', size);
-	ft_memset(b2, 'A', size);
-
-	printf("%s %s\n", b1, b2);
-
-
-	if (!memcmp(b1, b2, 20))
-		printf("test ok\n");
-	else
-		printf("test fail\n");
-
-}*/

@@ -1,27 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstclear.c                                      :+:      :+:    :+:   */
+/*   ft_string.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ymarcais <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/22 13:11:47 by ymarcais          #+#    #+#             */
-/*   Updated: 2022/12/30 13:04:43 by ymarcais         ###   ########.fr       */
+/*   Created: 2022/12/03 13:31:59 by ymarcais          #+#    #+#             */
+/*   Updated: 2022/12/03 14:58:18 by ymarcais         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+# include "libftprintf.h"
 
-void	ft_lstclear(t_list **lst, void (*del)(void*))
+void	ft_string(va_arg(args, char), int fd)
 {
-	t_list	*tmp;
+	char	*str2;
+	int		i;
 
-	if (!del || !lst || !*lst)
-		return ;
-	while (lst && *lst)
-	{
-		tmp = (*lst)->next;
-		ft_lstdelone(*lst, del);
-		*lst = tmp;
-	}
+	i = 0;
+	str2 = va_arg(args, char);
+	while (str2[i] != '\0')
+		write(fd, &str2[i++],1);
+}
 }
